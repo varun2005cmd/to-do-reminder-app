@@ -1,0 +1,21 @@
+# Function to print divider line
+divider() {
+echo "-------------------------------------------"
+}
+
+# Ignore backup and system files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Ignore compiled scripts
+*.out
+
+# Ignore local config and cache
+.DS_Store
+.cache/
+.history/
+
+# Ignore generated outputs
+outputs/
