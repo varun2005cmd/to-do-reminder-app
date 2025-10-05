@@ -10,7 +10,7 @@
 
 ---
 
-## 1️⃣ Working of Project
+## Working of Project
 
 ### 🔹 Project Title and Description
 **To-Do List and Reminder App** is a **Linux Shell Scripting project** that helps users efficiently manage daily tasks directly from the terminal.  
@@ -29,7 +29,7 @@ The project demonstrates how shell scripting can automate simple daily operation
 - **Operating System:** Ubuntu / Linux  
 - **Programming Language:** Shell Script (Bash)  
 - **Version Control:** Git and GitHub  
-- **Text Editors:** nano / vim / VS Code  
+- **Text Editors:**  VS Code  
 - **Linux Commands Used:** `echo`, `read`, `cat`, `grep`, `chmod`, `sleep`, `date`, `notify-send`  
 - **Automation:** Background reminders with `sleep`  
 
