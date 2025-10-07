@@ -75,7 +75,7 @@ chmod +x todo.sh reminder.sh
 ```bash
 ./todo.sh
 ```
-##example
+## example
 ==========================
     TO-DO LIST MENU
 ==========================
