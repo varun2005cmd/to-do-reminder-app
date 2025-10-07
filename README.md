@@ -100,7 +100,7 @@ Your Tasks:
 Select the task number to delete: 1
 Task deleted successfully!
 
-⏰ Step 4 — Run the Reminder Service
+### ⏰ Step 4 — Run the Reminder Service
 ./reminder.sh
 
 
