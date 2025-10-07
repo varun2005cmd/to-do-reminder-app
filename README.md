@@ -88,14 +88,14 @@ Choose an option [1-4]: 1
 Enter the task: Finish AI project report
 Task added successfully!
 
-##Viewing Tasks:
+## Viewing Tasks:
 
 Your Tasks:
 1. Finish AI project report
 2. Study for ML exam
 
 
-###Deleting a Task:
+## Deleting a Task:
 
 Select the task number to delete: 1
 Task deleted successfully!
