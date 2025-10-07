@@ -113,7 +113,8 @@ Example:
 2. Add Reminder
 3. Start Notification Service
 4. Exit
-==============================
+
+
 Enter your choice [1-4]: 2
 Enter reminder message: Attend meeting
 Enter time (HH:MM 24-hour format): 15:30
