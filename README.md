@@ -76,14 +76,14 @@ chmod +x todo.sh reminder.sh
 ./todo.sh
 ```
 ## example
-==========================
-    TO-DO LIST MENU
-==========================
+
+TO-DO LIST MENU
+
 1. Add Task
 2. View Tasks
 3. Delete Task
 4. Exit
-==========================
+
 Choose an option [1-4]: 1
 Enter the task: Finish AI project report
 Task added successfully!
