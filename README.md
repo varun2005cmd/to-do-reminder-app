@@ -1,58 +1,129 @@
-# 🗒️ To-Do List and Reminder App
+# 🗒️ To-Do List and Reminder App  
 
-| Student Name               | PRN           |
-|-----------------------------|---------------|
-| Varun Pendem               | 23070123149  |
-| Tarang Pandharipandhe      | 23070123140  |
-| Sreejita Bharadwaj         | 23070123130  |
-| Mukesh Rothe               | 23070123089  |
-| Yaman Ansari               | 23070123155  |
+A **Linux Shell Scripting project** that lets users manage daily tasks and reminders directly from the terminal.  
+Lightweight, fast, and built entirely with Bash.
 
 ---
 
-## Working of Project
+## 👥 Team Members  
 
-### 🔹 Project Title and Description
-**To-Do List and Reminder App** is a **Linux Shell Scripting project** that helps users efficiently manage daily tasks directly from the terminal.  
-It allows users to add, view, delete, and set reminders for important activities.  
-The project demonstrates how shell scripting can automate simple daily operations using standard Linux utilities.
-
-**Key Functionalities**
-- Add, view, and delete tasks  
-- Set reminders using system notifications (`notify-send`)  
-- Store all tasks in a persistent file (`tasks.txt`)  
-- Minimal and lightweight, ideal for Linux CLI users  
+| Name | PRN |
+|------|------|
+| Varun Pendem | 23070123149 |
+| Tarang Pandharipandhe | 23070123140 |
+| Sreejita Bhardwaj | **23070123130** |
+| Mukesh Rothe | 23070123089 |
+| Yaman Ansari | 23070123155 |
 
 ---
 
-### 🔹 Tools / Technologies Used
-- **Operating System:** Ubuntu / Linux  
-- **Programming Language:** Shell Script (Bash)  
-- **Version Control:** Git and GitHub  
-- **Text Editors:**  VS Code  
-- **Linux Commands Used:** `echo`, `read`, `cat`, `grep`, `chmod`, `sleep`, `date`, `notify-send`  
-- **Automation:** Background reminders with `sleep`  
+## 🚀 Overview  
+
+This project automates task management and reminders through simple Linux commands.  
+It demonstrates how Bash scripting can be used for everyday productivity tools — no GUI, just the terminal.
 
 ---
 
-### 🔹 Files Included
-| File Name | Description |
-|------------|-------------|
-| `todo.sh` | Main shell script for managing tasks and reminders |
-| `reminder.sh` | Script for background notifications (optional) |
-| `tasks.txt` | File storing user tasks |
-| `reminders.txt` | File containing recurring daily reminders (optional) |
-| `README.md` | Documentation of the project |
-| `.gitignore` | Specifies files to be ignored in Git |
+## ✨ Features  
+
+- 📝 **To-Do List Management** – Add, view, and delete tasks  
+- 🔔 **Reminders** – Add time-based reminders with `notify-send` desktop notifications  
+- 💾 **Persistent Storage** – Data saved in text files (`tasks.txt`, `reminders`)  
+- ⚙️ **Lightweight Automation** – Runs directly on Linux terminal  
 
 ---
 
-### 🔹 How to Run the Project
+## 🧰 Technologies Used  
 
-#### Step 1 — Clone the Repository
+| Component | Tool / Technology |
+|------------|-------------------|
+| **OS** | Ubuntu / Linux |
+| **Language** | Shell Script (Bash) |
+| **Version Control** | Git & GitHub |
+| **Editor** | VS Code |
+| **Commands Used** | `echo`, `read`, `cat`, `grep`, `sed`, `chmod`, `sleep`, `date`, `notify-send` |
+
+---
+
+## 📁 Project Files  
+
+| File | Description |
+|------|--------------|
+| `todo.sh` | Script for managing the to-do list (add/view/delete) |
+| `reminder.sh` | Script for setting and triggering reminders |
+| `tasks.txt` | Stores all user tasks |
+| `reminders` | Stores reminders |
+| `.gitignore` | Specifies ignored files |
+| `README.md` | Documentation file (this one) |
+
+---
+
+## 🧠 How to Run  
+
+### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/your-username/todo-reminder-app.git
 cd todo-reminder-app
 
+### 🧩 Step 2 — Give Execute Permissions
+```bash
+chmod +x todo.sh reminder.sh
 
-"C:\Users\DELL\to_do.md"
+
+### 🧩 Step 3— Run the To-Do List Script
+```bash
+./todo.sh
+
+##example
+==========================
+    TO-DO LIST MENU
+==========================
+1. Add Task
+2. View Tasks
+3. Delete Task
+4. Exit
+==========================
+Choose an option [1-4]: 1
+Enter the task: Finish AI project report
+Task added successfully!
+
+Viewing Tasks:
+
+Your Tasks:
+1. Finish AI project report
+2. Study for ML exam
+
+
+Deleting a Task:
+
+Select the task number to delete: 1
+Task deleted successfully!
+
+⏰ Step 4 — Run the Reminder Service
+./reminder.sh
+
+
+This script handles your reminders and sends notifications at the specified time.
+
+Example:
+
+==============================
+        REMINDER MENU
+==============================
+1. View Reminders
+2. Add Reminder
+3. Start Notification Service
+4. Exit
+==============================
+Enter your choice [1-4]: 2
+Enter reminder message: Attend meeting
+Enter time (HH:MM 24-hour format): 15:30
+✅ Reminder added successfully!
+
+
+When the reminder time matches the system time, you’ll see:
+
+🔔 Reminder: Attend meeting
+
+
+and a desktop notification will appear via notify-send.
