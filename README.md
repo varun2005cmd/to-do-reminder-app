@@ -101,8 +101,9 @@ Select the task number to delete: 1
 Task deleted successfully!
 
 ### ⏰ Step 4 — Run the Reminder Service
+```bash
 ./reminder.sh
-
+```
 
 This script handles your reminders and sends notifications at the specified time.
 
