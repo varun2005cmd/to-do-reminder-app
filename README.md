@@ -108,9 +108,7 @@ This script handles your reminders and sends notifications at the specified time
 
 Example:
 
-==============================
-        REMINDER MENU
-==============================
+## REMINDER MENU
 1. View Reminders
 2. Add Reminder
 3. Start Notification Service
