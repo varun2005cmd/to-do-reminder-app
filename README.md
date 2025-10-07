@@ -64,16 +64,17 @@ It demonstrates how Bash scripting can be used for everyday productivity tools �
 ```bash
 git clone https://github.com/your-username/todo-reminder-app.git
 cd todo-reminder-app
+```
 
 ### 🧩 Step 2 — Give Execute Permissions
 ```bash
 chmod +x todo.sh reminder.sh
-
+```
 
 ### 🧩 Step 3— Run the To-Do List Script
 ```bash
 ./todo.sh
-
+```
 ##example
 ==========================
     TO-DO LIST MENU
@@ -87,14 +88,14 @@ Choose an option [1-4]: 1
 Enter the task: Finish AI project report
 Task added successfully!
 
-Viewing Tasks:
+##Viewing Tasks:
 
 Your Tasks:
 1. Finish AI project report
 2. Study for ML exam
 
 
-Deleting a Task:
+###Deleting a Task:
 
 Select the task number to delete: 1
 Task deleted successfully!
