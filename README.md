@@ -177,6 +177,7 @@ Notification Output
 🔔 Reminder: Attend meeting
 
 📊 Statistics Example (taskStats.sh)
+
 📊 To-Do List Statistics
 ---------------------------------
 Total Tasks   : 10
