@@ -1,7 +1,7 @@
-# 🗒️ To-Do List and Reminder App  
+# 🗒️ To-Do List & Reminder Suite  
 
-A **Linux Shell Scripting project** that lets users manage daily tasks and reminders directly from the terminal.  
-Lightweight, fast, and built entirely with Bash.
+A **Linux Shell Scripting Project** that combines productivity tools like **to-do lists**, **reminders**, **focus timers**, and **system cleanup automation** — all running directly in the terminal.  
+Lightweight, efficient, and built entirely with Bash.  
 
 ---
 
@@ -11,7 +11,7 @@ Lightweight, fast, and built entirely with Bash.
 |------|------|
 | Varun Pendem | 23070123149 |
 | Tarang Pandharipandhe | 23070123140 |
-| Sreejita Bhardwaj | **23070123130** |
+| Sreejita Bhardwaj | 23070123130 |
 | Mukesh Rothe | 23070123089 |
 | Yaman Ansari | 23070123155 |
 
@@ -19,17 +19,39 @@ Lightweight, fast, and built entirely with Bash.
 
 ## 🚀 Overview  
 
-This project automates task management and reminders through simple Linux commands.  
-It demonstrates how Bash scripting can be used for everyday productivity tools — no GUI, just the terminal.
+This project demonstrates how **Bash scripting** can be used to build powerful, minimal productivity tools — no GUI, no heavy dependencies, just shell magic.  
+It includes scripts for managing tasks, reminders, focus sessions, and system cleanup.
 
 ---
 
 ## ✨ Features  
 
-- 📝 **To-Do List Management** – Add, view, and delete tasks  
-- 🔔 **Reminders** – Add time-based reminders with `notify-send` desktop notifications  
-- 💾 **Persistent Storage** – Data saved in text files (`tasks.txt`, `reminders`)  
-- ⚙️ **Lightweight Automation** – Runs directly on Linux terminal  
+### ✅ To-Do List (`todo.sh`)
+- Add, view, and delete daily tasks  
+- Automatically numbers and stores tasks in `tasks.txt`  
+- Simple CLI interface for efficient management  
+
+### 🔔 Reminder System (`reminder.sh`)
+- Add time-based reminders  
+- Sends desktop notifications via `notify-send`  
+- Auto-checks reminders every 30 seconds  
+
+### 🧘 Focus Mode (`focus.sh`)
+- Timer-based productivity session  
+- Logs completed sessions in `focus_sessions.log`  
+- Sends a notification when time is up  
+
+### 🧹 System Cleanup (`clean_temp.sh`)
+- Deletes temp, cache, and log files older than 7 days  
+- Targets `/tmp`, `$HOME/.cache`, `/var/tmp`, and `./logs`  
+- Runs silently and safely  
+
+### 🕒 Due Soon (`dueSoon.sh`)
+- Lists tasks due within the next 24 hours (uses JSON task data)  
+
+### 📊 Task Stats (`taskStats.sh`)
+- Displays total, completed, and pending task count  
+- Shows a visual progress bar and category breakdown  
 
 ---
 
@@ -38,93 +60,151 @@ It demonstrates how Bash scripting can be used for everyday productivity tools �
 | Component | Tool / Technology |
 |------------|-------------------|
 | **OS** | Ubuntu / Linux |
-| **Language** | Shell Script (Bash) |
+| **Language** | Bash Shell Script |
 | **Version Control** | Git & GitHub |
 | **Editor** | VS Code |
-| **Commands Used** | `echo`, `read`, `cat`, `grep`, `sed`, `chmod`, `sleep`, `date`, `notify-send` |
+| **Commands Used** | `echo`, `read`, `cat`, `grep`, `sed`, `jq`, `date`, `notify-send`, `find`, `chmod`, `sleep` |
 
 ---
 
-## 📁 Project Files  
+## 📁 Project Structure  
 
-| File | Description |
-|------|--------------|
-| `todo.sh` | Script for managing the to-do list (add/view/delete) |
-| `reminder.sh` | Script for setting and triggering reminders |
-| `tasks.txt` | Stores all user tasks |
-| `reminders` | Stores reminders |
-| `.gitignore` | Specifies ignored files |
-| `README.md` | Documentation file (this one) |
+📦 todo-reminder-suite/
+├── README.md
+├── tasks.txt
+├── reminders
+├── focus_sessions.log
+├── scripts/
+│ ├── todo.sh
+│ ├── reminder.sh
+│ ├── focus.sh
+│ ├── clean_temp.sh
+│ ├── dueSoon.sh
+│ ├── taskStats.sh
+│ └── checkPending.sh
+└── .gitignore
+
+
+
+
 
 ---
 
-## 🧠 How to Run  
+## ⚙️ Setup & Execution  
 
 ### 1️⃣ Clone the Repository  
 ```bash
-git clone https://github.com/your-username/todo-reminder-app.git
-cd todo-reminder-app
+git clone https://github.com/your-username/todo-reminder-suite.git
+cd todo-reminder-suite
 ```
 
-### 🧩 Step 2 — Give Execute Permissions
+### 2️⃣ Make Scripts Executable
 ```bash
-chmod +x todo.sh reminder.sh
+chmod +x scripts/*.sh
 ```
 
-### 🧩 Step 3— Run the To-Do List Script
-```bash
-./todo.sh
+### 3️⃣ Run a Script
+
+To open the To-Do list:
 ```
-## example
+./scripts/todo.sh
+```
 
-TO-DO LIST MENU
+To start reminders:
+```
+./scripts/reminder.sh
+```
 
+To clean old temp files:
+```
+./scripts/clean_temp.sh
+```
+
+To enter focus mode:
+```
+./scripts/focus.sh
+```
+
+## 💡 Example (To-Do List)
+
+Menu Example:
+TO-DO LIST: 
 1. Add Task
 2. View Tasks
 3. Delete Task
 4. Exit
 
-Choose an option [1-4]: 1
+Choose an option [1-4]:
+
+
+Add Task
+
 Enter the task: Finish AI project report
-Task added successfully!
+✅ Task added successfully!
 
-## Viewing Tasks:
 
-Your Tasks:
+View Tasks
+
+📝 Your Tasks:
 1. Finish AI project report
 2. Study for ML exam
 
 
-## Deleting a Task:
+Delete Task
 
-Select the task number to delete: 1
-Task deleted successfully!
+Task number: 1
+✅ Task deleted successfully!
 
-### ⏰ Step 4 — Run the Reminder Service
-```bash
-./reminder.sh
-```
-
-This script handles your reminders and sends notifications at the specified time.
-
-Example:
-
-## REMINDER MENU
+🔔 Reminder Example
+REMINDER MENU
 1. View Reminders
 2. Add Reminder
 3. Start Notification Service
 4. Exit
 
+Enter your choice [1-4]:
 
-Enter your choice [1-4]: 2
+
+Add Reminder
+
 Enter reminder message: Attend meeting
 Enter time (HH:MM 24-hour format): 15:30
 ✅ Reminder added successfully!
 
 
-When the reminder time matches the system time, you’ll see:
+Notification Output
 
 🔔 Reminder: Attend meeting
 
+📊 Statistics Example (taskStats.sh)
+📊 To-Do List Statistics
+---------------------------------
+Total Tasks   : 10
+Completed     : 6
+Pending       : 4
+Progress      : [██████████        ] 60%
+---------------------------------
+# 📂 Category Summary:
+  - work: 5 tasks
+  - personal: 5 tasks
 
-and a desktop notification will appear via notify-send.
+# 🧩 Maintenance Tools
+Script	Purpose
+clean_temp.sh	Deletes old cache and logs
+dueSoon.sh	Checks for upcoming deadlines
+focus.sh	Timer-based focus sessions
+checkPending.sh	Displays remaining unfinished tasks
+# 🧠 Future Enhancements
+
+ Add color-coded terminal UI
+
+ Integrate with cron for auto-reminders
+
+ Support recurring reminders
+
+ Add JSON export/import for tasks
+
+ ### 🧾 License
+
+This project is open-source and available under the MIT License
+.
