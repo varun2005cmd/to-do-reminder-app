@@ -92,18 +92,18 @@ It includes scripts for managing tasks, reminders, focus sessions, and system cl
 
 ## ⚙️ Setup & Execution  
 
-# 1️⃣ Clone the Repository  
+### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/your-username/todo-reminder-suite.git
 cd todo-reminder-suite
 ```
 
-# 2️⃣ Make Scripts Executable
+### 2️⃣ Make Scripts Executable
 ```bash
 chmod +x scripts/*.sh
 ```
 
-# 3️⃣ Run a Script
+### 3️⃣ Run a Script
 
 To open the To-Do list:
 ```
@@ -204,7 +204,7 @@ checkPending.sh	Displays remaining unfinished tasks
 
  Add JSON export/import for tasks
 
- ### 🧾 License
+ # 🧾 License
 
 This project is open-source and available under the MIT License
 .
